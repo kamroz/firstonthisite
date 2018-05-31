@@ -29,9 +29,9 @@ def allerrand(baseurl):
     for x in errandlist:
         znakmniejszosci = x
         backslash = (znakmniejszosci + errand.__len__())
-        czeschtmla = html[backslash:backslash+200]
-        koniecurla = czeschtmla.find(szukaj)
+        pieceofhtml = html[backslash:backslash+200]
+        endofurl = pieceofhtml.find(szukaj)
 
         #od pozycji `backslash` do pozycji znaku cudzyslowie `"`
-        pozycjakoncaurla = koniecurla + szukaj.__len__()
+        positionofend = endofurl + szukaj.__len__()
         print("http://favore.pl/zlecenie/" + html[backslash :(backslash+pozycjakoncaurla)])
